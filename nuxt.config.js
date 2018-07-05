@@ -11,7 +11,7 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.neax.io/assets/neax-fonts.css' }
     ]
   },
-  plugins: ['~/plugins/font-awesome.js'],
+  plugins: ['~/lib/plugins/font-awesome.js'],
   css: ['~/css/main.css'],
   build: {
     postcss: [

@@ -1,5 +1,6 @@
 <template>
   <div>
+    Time now: --{{ new Date() | moment("dddd, MMMM Do YYYY") }}--
     <div v-for="page in pages">
       <h1>{{ page.title }}</h1>
       <p>{{ page.content }}</p>
