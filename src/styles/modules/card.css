@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+
+  background-clip: border-box;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--base-border-radius);
+  min-width: 0;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 1rem 3rem rgba(189, 195, 199, 0.6);
+  }
+}
+
+.card-image {
+  border-radius: calc(var(--base-border-radius - 1px)) calc(var(--base-border-radius - 1px)) 0 0;
+
+  display: block;
+  width: 100%;
+}
+
+.card-content {
+  padding: var(--spacing);
+  flex: 1 1 auto;
+}
+
+.card-links {
+  margin-top: var(--spacing);
+}

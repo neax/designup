@@ -2,13 +2,19 @@
   <div>
     <Navbar>
       <template slot="logo">
-        <a href="#"><i class="fas fa-cube"></i> DesignX</a>
+        <a href="#"><font-awesome-icon icon="cube" /> Designup</a>
       </template>
       <template slot="right">
         <a href="#">Icon 1</a>
+
+        <NavDropdown title="Example of dropdown" icon=true>
+          <a href="#">First link</a>
+        </NavDropdown>
       </template>
     </Navbar>
-    <nuxt/>
+    <main>
+      <nuxt/>
+    </main>
   </div>
 </template>
 

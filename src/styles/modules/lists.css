@@ -1,0 +1,45 @@
+ul,
+ol {
+  margin: 0;
+  margin-left: var(--spacing);
+  padding: 0;
+
+  &.unstyled {
+    list-style-type: none;
+    margin-left: 0;
+  }
+
+  &.inline {
+    margin-left: 0;
+  
+    li {
+      display: inline-block;
+      margin-right: calc(var(--spacing) / 2);
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: var(--font-semi-bold);
+  margin: 0;
+}
+
+dd {
+  margin: 0;
+}

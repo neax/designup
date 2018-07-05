@@ -1,0 +1,65 @@
+/*
+* Progress bar
+*/
+
+.progress-bar {
+  border-radius: var(--base-border-radius);
+  border: 1px solid var(--light-gray);
+  padding: 2px;
+  background-color: white;
+}
+
+.progress-bar-content {
+  text-align: center;
+  border-radius: var(--base-border-radius);
+  display: block;
+  padding: 0 2px;
+  max-width: 100%;
+
+  @apply --primary-theme;
+
+  background-color: var(--primary);
+  color: var(--secondary);
+
+  /* Colors */
+  /* Colors */
+  &.blue {
+    @apply --blue-theme;
+  }
+  &.green {
+    @apply --green-theme;
+  }
+  &.red {
+    @apply --red-theme;
+  }
+  &.orange {
+    @apply --orange-theme;
+  }
+  &.purple {
+    @apply --purple-theme;
+  }
+  &.sky-blue {
+    @apply --sky-blue-theme;
+  }
+  &.yellow {
+    @apply --yellow-theme;
+  }
+  &.brown {
+    @apply --brown-theme;
+  }
+  &.white {
+    @apply --white-theme;
+  }
+  &.black {
+    @apply --black-theme;
+  }
+  &.dark-gray {
+    @apply --dark-gray-theme;
+  }
+  &.medium-gray {
+    @apply --medium-gray-theme;
+  }
+  &.light-gray {
+    @apply --light-gray-theme;
+  }
+}

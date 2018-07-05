@@ -11,5 +11,9 @@ export default {
   black: '#000',
   darkGray: '#333',
   mediumGray: '#999',
-  lightGray: '#ddd'
+  lightGray: '#ddd',
+
+  /* Social colors */
+  facebookColor: '#36579d',
+  googleColor: '#e5462c'
 }

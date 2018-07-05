@@ -1,0 +1,47 @@
+figure {
+  margin: 0;
+
+  &.caption-hover {
+    position: relative;
+
+    figcaption {
+      padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);
+
+      position: absolute;
+      top: null;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      background: color-mod(var(--black) alpha(0.3));
+      color: var(--white);
+      display: none;
+    }
+
+    img {
+      display: block;
+    }
+
+    &:hover {
+      figcaption {
+        display: block;
+      }
+    }
+  }
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+
+  &.cover {
+    object-fit: cover;
+  }
+}
+
+figcaption {
+  color: var(--medium-gray);
+  font-size: 95%;
+  text-align: center;
+}

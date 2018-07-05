@@ -1,2 +1,25 @@
+@import './modules/colors.css';
+
+@import './modules/global.css';
+@import './modules/main.css';
+@import './modules/sidebar.css';
+@import './modules/table.css';
+@import './modules/page.css';
+@import './modules/footer.css';
+@import './modules/button.css';
+@import './modules/grid.css';
+@import './modules/card.css';
+@import './modules/auth.css';
+@import './modules/utilities.css';
+@import './modules/badge.css';
+@import './modules/pagination.css';
+@import './modules/breadcrumb.css';
+@import './modules/progress-bar.css';
 @import './modules/typography.css';
-@import './modules/navbar.css';
+@import './modules/forms.css';
+@import './modules/lists.css';
+@import './modules/media.css';
+@import './modules/alert.css';
+@import './modules/navdropdown.css';
+@import './modules/modal.css';
+@import './modules/colors.css';

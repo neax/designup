@@ -6,6 +6,26 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
+"@fortawesome/fontawesome-common-types@^0.2.0":
+  version "0.2.0"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.0.tgz#6bcf6481030f59e7ffd1a40a67cd464d47780f6a"
+
+"@fortawesome/fontawesome-svg-core@^1.2.0":
+  version "1.2.0"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.0.tgz#b0ec14af25cdc11d38ede7d8c94b89b478ab67ab"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.0"
+
+"@fortawesome/free-solid-svg-icons@^5.1.0":
+  version "5.1.0"
+  resolved "https://npm.fontawesome.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.1.0.tgz#1a4b43027104d63c7862fd39333f6ed6d8bb2c9a"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.0"
+
+"@fortawesome/vue-fontawesome@^0.1.0":
+  version "0.1.0"
+  resolved "https://npm.fontawesome.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.0.tgz#ff45bb6efe2f585f5faebf174a10b1887c06547b"
+
 "@nuxtjs/friendly-errors-webpack-plugin@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-2.0.2.tgz#80fd4c4276e87c09a9157a6f433724235eaaaf6e"
@@ -2945,6 +2965,10 @@ map-visit@^1.0.0:
   resolved "https://registry.yarnpkg.com/map-visit/-/map-visit-1.0.0.tgz#ecdca8f13144e660f1b5bd41f12f3479d98dfb8f"
   dependencies:
     object-visit "^1.0.0"
+
+marked@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.4.0.tgz#9ad2c2a7a1791f10a852e0112f77b571dce10c66"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
