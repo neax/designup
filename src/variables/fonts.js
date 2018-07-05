@@ -1,6 +1,6 @@
-import colors from './colors'
+const colors = require('./colors')
 
-export default {
+module.exports = {
   /* Font families */
   baseFontFamily: 'proximasoft, sans-serif',
 

@@ -1,8 +1,8 @@
-import colors from './colors'
-import spacing from './spacing'
-import fonts from './fonts'
-import globalVariables from './global'
-import themes from './themes'
+const colors = require('./colors')
+const spacing = require('./spacing')
+const fonts = require('./fonts')
+const globalVariables = require('./global')
+const themes = require('./themes')
 
 module.exports = function(options) {
   const colorSchemes = {}

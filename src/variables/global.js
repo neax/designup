@@ -1,6 +1,6 @@
-import colors from './colors'
+const colors = require('./colors')
 
-export default {
+module.exports = {
   baseDuration: '150ms',
   baseTiming: 'ease',
   baseBorderColor: colors.lightGray,

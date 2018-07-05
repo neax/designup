@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   '--small-screen-up': '(width > 540px)',
   '--small-screen-down': '(width <= 540px)',
   '--medium-screen-up': '(width > 720px)',

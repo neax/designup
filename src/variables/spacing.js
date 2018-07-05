@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   baseLineHeight: '1.618',
   headingLineHeight: '100%',
   baseBorderRadius: '3px',

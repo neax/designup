@@ -1,6 +1,6 @@
-import colors from './colors'
+const colors = require('./colors')
 
-export default {
+module.exports = {
   blue: {
     primary: colors.blue,
     secondary: colors.white
