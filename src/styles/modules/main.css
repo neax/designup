@@ -1,0 +1,5 @@
+main {
+  padding: calc(var(--spacing) * 1.5) var(--spacing);
+  max-width: var(--main-width);
+  margin: 0 auto;
+}

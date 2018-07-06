@@ -1,0 +1,8 @@
+footer {
+  margin: 0 0 var(--spacing);
+  padding: var(--spacing);
+
+  color: color-mod(var(--medium-gray) tint(5%));
+  font-size: 80%;
+  text-align: center;
+}

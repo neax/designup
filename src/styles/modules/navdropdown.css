@@ -1,0 +1,43 @@
+:root {
+  --color-1-s-050: color-mod(var(--primary) shade(5%));
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    & .nav-dropdown-button {
+      background-color: var(--color-1-s-050);
+    }
+
+    & .nav-dropdown-content {
+      display: block;
+    }
+  }
+}
+
+.nav-dropdown-content {
+  position: absolute;
+  right: 0;
+
+  background-color: var(--primary);
+  display: none;
+  min-width: 120px;
+  width: 100%;
+  z-index: 999999;
+
+  & a {
+    display: block;
+    text-align: right;
+  }
+}
+
+.nav-dropdown-icon {
+  margin-left: calc(var(--spacing) / 8);
+}
+
+.nav-responsive {
+  & .nav-dropdown-content {
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@neax/designup",
+  "main": "lib/module.js",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "devDependencies": {
+    "marked": "^0.4.0",
+    "nuxt-edge": "^2.0.0-25507878.d98c983",
+    "postcss-import": "^11.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "postcss-preset-env": "^5.2.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.0",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0",
+    "@fortawesome/vue-fontawesome": "^0.1.0"
+  }
+}

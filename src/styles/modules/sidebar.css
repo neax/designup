@@ -1,0 +1,35 @@
+.sidebar {
+  & a {
+    color: var(--medium-gray);
+    display: block;
+    font-weight: var(--font-semi-bold);
+    margin-bottom: calc(var(--spacing) / 2);
+
+    &:hover,
+    &.active {
+      color: var(--primary);
+    }
+  }
+
+  & h3 {
+    margin-bottom: calc(var(--spacing) / 1.5);
+
+    &:not(:first-child) {
+      margin-top: var(--spacing);
+    }
+  }
+}
+
+.sidebar-option-title {
+  color: var(--dark-gray) !important;
+
+  &:hover,
+  &.active {
+    color: var(--primary) !important;
+  }
+}
+
+.sidebar-sub-option {
+  font-size: 0.95rem;
+  margin-left: calc(var(--spacing) / 1.5);
+}
