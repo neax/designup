@@ -1,4 +1,8 @@
-/* nav {
+:root {
+  --navbar-height: 54px;
+}
+
+nav {
   padding: 0 calc(var(--spacing) / 2);
   clearfix: both;
   box-sizing: border-box;
@@ -16,18 +20,17 @@
     padding: 0 calc(var(--spacing) / 2);
 
     color: var(--secondary);
-    font-size: 50px;
     display: inline-block;
     line-height: var(--navbar-height);
 
     &:hover {
-      background-color: var(--primary-550);
+      background-color: color-mod(var(--primary) shade(5%));
       color: var(--secondary);
       text-decoration: none;
     }
 
     &.active {
-      background-color: var(--primary-550);
+      background-color: color-mod(var(--primary) shade(5%));
     }
   }
 
@@ -133,4 +136,4 @@
     padding: 0 calc(var(--spacing) / 6);
     text-align: center;
   }
-} */
+}

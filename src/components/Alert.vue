@@ -1,8 +1,10 @@
 <template lang="html">
-  <div class="alert" :class="colorClass" v-if="display">
-    <div class="alert-close" v-if="close" v-on:click="display = false"><i class="fas fa-times"></i></div>
-    <slot></slot>
-  </div>
+  <transition name="fade">
+    <div class="alert" :class="[colorClass, { fixed }]" v-if="display">
+      <div class="alert-close" v-if="close" v-on:click="display = false"><font-awesome-icon icon="times" /></div>
+      <slot></slot>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -32,7 +34,22 @@ export default {
     close: {
       type: Boolean,
       default: false
+    },
+    fixed: {
+      type: Boolean,
+      default: false
     }
   }
 }
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

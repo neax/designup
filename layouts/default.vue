@@ -1,9 +1,6 @@
 <template>
   <div>
-    <Navbar>
-      <template slot="logo">
-        <a href="#"><font-awesome-icon icon="cube" /> Designup</a>
-      </template>
+    <Navbar title="Attendance" icon="times">
       <template slot="right">
         <a href="#">Icon 1</a>
 
@@ -20,10 +17,12 @@
 
 <script>
 import Navbar from '~~/src/components/NavBar'
+import NavDropdown from '../src/components/NavDropdown'
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    NavDropdown
   }
 }
 </script>
