@@ -69,7 +69,7 @@ select[multiple] {
   width: 100%;
 
   &:hover {
-    background-color: color-mod(var(--white) shade(20%));
+    border-color: color-mod(var(--white) shade(20%));
   }
 
   &:focus {

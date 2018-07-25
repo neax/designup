@@ -1,14 +1,10 @@
-:root {
-  --color-1-s-050: color-mod(var(--primary) shade(5%));
-}
-
 .nav-dropdown {
   display: inline-block;
   position: relative;
 
   &:hover {
     & .nav-dropdown-button {
-      background-color: var(--color-1-s-050);
+      background-color: color-mod(var(--primary) shade(5%));
     }
 
     & .nav-dropdown-content {
