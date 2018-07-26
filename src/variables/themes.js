@@ -46,7 +46,7 @@ module.exports = {
     secondary: colors.white
   },
   mediumGray: {
-    primary: colors.darkGray,
+    primary: colors.mediumGray,
     secondary: colors.white
   },
   lightGray: {
