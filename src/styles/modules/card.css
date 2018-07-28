@@ -10,7 +10,7 @@
   position: relative;
 
   &:hover {
-    box-shadow: 0 1rem 3rem rgba(189, 195, 199, 0.6);
+    box-shadow: 0 5px 20px rgba(3, 27, 78, 0.1);
   }
 }
 
