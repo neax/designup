@@ -16,6 +16,26 @@
         </small>
       </div>
 
+      <h2>Cards</h2>
+
+      <div class="card" style="max-width: 300px;">
+        <img class="card-image" src="https://placeimg.com/640/480/any">
+        <div class="card-content">
+          <div class="text-center">
+            <h3>
+              Socialup
+            </h3>
+
+            <span>123123 likes</span>
+          </div>
+        </div>
+        <div class="card-links">
+          <a href="#">Daily post</a>
+          <a href="#">Gifs</a>
+          <a href="#">Schedule    </a>
+        </div>
+      </div>
+
       <h2>Inputs</h2>
 
       <input type="text" placeholder="email">

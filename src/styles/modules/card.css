@@ -1,6 +1,4 @@
 .card {
-  display: flex;
-  flex-direction: column;
   word-wrap: break-word;
 
   background-clip: border-box;
@@ -10,7 +8,7 @@
   position: relative;
 
   &:hover {
-    box-shadow: 0 5px 20px rgba(3, 27, 78, 0.1);
+    box-shadow: 0 5px 20px rgba(128, 128, 128, 0.1);
   }
 }
 
@@ -22,10 +20,19 @@
 }
 
 .card-content {
-  padding: var(--spacing);
-  flex: 1 1 auto;
+  margin: var(--spacing) 0;
+  padding: 0 var(--spacing);
 }
 
 .card-links {
-  margin-top: var(--spacing);
+  margin: var(--spacing) 0;
+  padding: 0 var(--spacing);
+
+  & a {
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-right: var(--spacing);
+    }
+  }
 }
