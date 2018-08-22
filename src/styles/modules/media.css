@@ -4,7 +4,7 @@ figure {
   &.caption-hover {
     position: relative;
 
-    figcaption {
+    & figcaption {
       padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);
 
       position: absolute;
@@ -18,12 +18,12 @@ figure {
       display: none;
     }
 
-    img {
+    & img {
       display: block;
     }
 
     &:hover {
-      figcaption {
+      & figcaption {
         display: block;
       }
     }

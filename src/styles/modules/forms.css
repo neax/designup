@@ -56,7 +56,8 @@ textarea {
 }
 
 :--all-text-inputs,
-select[multiple] {
+select[multiple],
+textarea {
   appearance: none;
   background-color: var(--white);
   border: var(--base-border);

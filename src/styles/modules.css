@@ -13,9 +13,9 @@
 @import './modules/utilities.css';
 @import './modules/badge.css';
 @import './modules/pagination.css';
-@import './modules/breadcrumb.css';
 @import './modules/progress-bar.css';
 @import './modules/typography.css';
+@import './modules/breadcrumb.css';
 @import './modules/forms.css';
 @import './modules/lists.css';
 @import './modules/media.css';

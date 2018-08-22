@@ -16,6 +16,17 @@
         </small>
       </div>
 
+      <h2>Pagination</h2>
+
+      <div class="pagination">
+        <a href="#">1</a>
+        <a href="#">2</a>
+      </div>
+      <div class="breadcrumbs">
+        <a href="#">Home</a>
+        <a href="#">Index</a>
+      </div>
+
       <h2>Cards</h2>
 
       <div class="card" style="max-width: 300px;">

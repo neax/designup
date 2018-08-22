@@ -11,11 +11,12 @@ ol {
 
   &.inline {
     margin-left: 0;
-  
-    li {
+
+    & li {
       display: inline-block;
       margin-right: calc(var(--spacing) / 2);
-      
+      margin-bottom: calc(var(--spacing) / 2);
+
       &:last-child {
         margin-right: 0;
       }
