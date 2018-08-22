@@ -12,12 +12,12 @@
     color: var(--medium-gray);
 
     &:last-child {
-      color: var(--primary) !important;
+      color: var(--primary);
     }
 
     &:not(:last-child) {
       &:hover {
-        color: var(--primary) !important;
+        color: var(--primary);
       }
     }
 
