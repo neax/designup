@@ -111,6 +111,43 @@
   color: color-mod(var(--dark-gray) l(10%));
 }
 
+.color {
+  color: var(--color-1);
+}
+
+.background {
+  background: var(--color-1);
+}
+
+.background-color {
+  color: var(--color-2);
+  background: var(--color-1);
+}
+
+.section-spacing {
+  margin-bottom: calc(var(--spacing) * 1.5);
+
+  &.small {
+    margin-bottom: var(--spacing);
+  }
+
+  &.large {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+}
+
+.inner-spacing {
+  padding: calc(var(--spacing) / 2);
+
+  &.small {
+    padding: calc(var(--spacing) / 4);
+  }
+
+  &.large {
+    padding: var(--spacing);
+  }
+}
+
 /* Display */
 
 .hidden {

@@ -1,10 +1,21 @@
 <template>
   <div>
+
+    <h2>Modal</h2>
+    <a @click="$refs.modalRef.open()">OPEN</a>
+    <modal ref="modalRef" :show="false" size="large" :closeMask="true" :closeIcon="true">
+      <p>Hello world, are you sure you want to do this?</p>
+      <p><a @click="$refs.modalRef.close()">Close</a></p>
+    </modal>
+
     <div v-for="page in pages">
       <h1>{{ page.title }}</h1>
       <p>{{ page.content }}</p>
 
       <alert color="green" :close="true" :fixed="true" ref="alerting">H---sGi</alert>
+
+
+
 
       <h2>Test progress bar</h2>
 
@@ -67,17 +78,24 @@
 <script>
 import marked from 'marked'
 import Alert from '../src/components/Alert'
+import Modal from '../src/components/Modal'
 
 export default {
-  components: { Alert },
+  components: { Alert, Modal },
   data: function() {
     return {
       pages: [require('./../static/docs/alert')]
     }
   },
+  created() {
+    console.log(this)
+  },
   methods: {
     compiledMarkdown: function(input) {
       return marked(input, { sanitize: true })
+    },
+    foo() {
+      console.log('LGOFGODM')
     }
   }
 }
