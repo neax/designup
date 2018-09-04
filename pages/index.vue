@@ -3,7 +3,7 @@
 
     <h2>Modal</h2>
     <a @click="$refs.modalRef.open()">OPEN</a>
-    <modal ref="modalRef" :show="false" size="large" :closeMask="true" :closeIcon="true">
+    <modal ref="modalRef" :show="false" size="large" :closeMask="true" :closeIcon="true" @close="tests()">
       <p>Hello world, are you sure you want to do this?</p>
       <p><a @click="$refs.modalRef.close()">Close</a></p>
     </modal>
@@ -87,16 +87,13 @@ export default {
       pages: [require('./../static/docs/alert')]
     }
   },
-  created() {
-    console.log(this)
-  },
+  created() {},
   methods: {
     compiledMarkdown: function(input) {
       return marked(input, { sanitize: true })
     },
-    foo() {
-      console.log('LGOFGODM')
-    }
+    foo() {},
+    tests() {}
   }
 }
 </script>

@@ -41,9 +41,11 @@ export default {
   methods: {
     close() {
       this.showState = false
+      this.$emit('close')
     },
     open() {
       this.showState = true
+      this.$emit('open')
     },
     closeMaskAction() {
       if (this.closeMask) {
