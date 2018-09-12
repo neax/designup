@@ -128,6 +128,37 @@ select {
   }
 }
 
+.input-group {
+  display: flex;
+
+  & .button {
+    padding: calc(var(--spacing) / 3);
+  }
+
+  & :--all-text-inputs,
+  & select[multiple],
+  & .button {
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:not(:first-child) {
+      margin-left: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:nth-child(n) {
+      z-index: 2;
+
+      &:focus {
+        z-index: 3;
+      }
+    }
+  }
+}
+
 .input-icon-addon {
   display: flex;
   border-top-left-radius: var(--base-border-radius);

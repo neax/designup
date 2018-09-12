@@ -1,6 +1,15 @@
 <template>
   <div>
 
+    <h3>ionput</h3>
+    <a class="button red">Hi</a>
+    <div class="input-group">
+      <a class="button primary">Hi</a>
+      <input type="text" placeholder="My input">
+      <input type="text" placeholder="My input">
+      <input type="text" placeholder="My input">
+    </div>
+
     <h2>Modal</h2>
     <a @click="$refs.modalRef.open()">OPEN</a>
     <modal ref="modalRef" :show="false" size="large" :closeMask="true" :closeIcon="true" @close="tests()">
