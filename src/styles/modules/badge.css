@@ -16,8 +16,6 @@
     display: none;
   }
 
-  /* Colors */
-
   /* Modifiers */
   &.small {
     font-size: 80%;
