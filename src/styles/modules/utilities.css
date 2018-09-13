@@ -164,6 +164,20 @@
   border-radius: var(--base-border-radius);
 }
 
+.squared {
+  border-radius: 0;
+}
+
+.squared-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.squared-right {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .circle {
   border-radius: 50%;
 }

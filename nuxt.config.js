@@ -18,6 +18,9 @@ export default {
       require('postcss-preset-env')({
         stage: 0,
         features: {
+          'color-mod-function': {
+            unresolved: 'ignore'
+          },
           'custom-properties': {
             preserve: false,
             variables: require('./src/variables/variables')({ theme: 'green' })
