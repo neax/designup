@@ -24,7 +24,8 @@
   border: 1px solid var(--color-1);
   color: var(--color-2);
 
-  &:hover {
+  &:hover,
+  &.active {
     background-color: var(--color-1-s-125);
     border-color: var(--color-1-s-125);
     color: var(--color-2);
@@ -35,7 +36,8 @@
     box-shadow: 0 0 0 3px var(--color-1-a-005);
   }
 
-  &:disabled {
+  &:disabled,
+  &.disabled {
     cursor: not-allowed;
     opacity: 0.5;
 
@@ -60,7 +62,8 @@
     border: 1px solid var(--color-1);
     color: var(--color-1);
 
-    &:hover {
+    &:hover,
+    &.active {
       background-color: var(--color-1);
       color: var(--color-2);
     }

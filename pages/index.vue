@@ -1,6 +1,35 @@
 <template>
   <div>
 
+    <h3>ionput</h3>
+    <a class="button purple outline">Hi</a>
+    <a class="button red">Hi</a>
+    <div class="input-group">
+      <a class="button light-gray disabled">Hi</a>
+      <a class="button light-gray active">Hi</a>
+      <a class="button light-gray">Hi</a>
+
+      <input type="text" placeholder="My input">
+      <div class="input-autocomplete" style="width: 100%">
+        <input type="text" style="border-radius: 0" placeholder="My input">
+
+        <div class="input-autocomplete-items">
+          <span class="input-autocomplete-item active">First option and this is the rightn asd asd <span class="badge red">hi</span> <span class="right font-medium">15 items</span></span>
+          <span class="input-autocomplete-item active">Seconds option</span>
+          <span class="input-autocomplete-item active">Third option</span>
+          <span class="input-autocomplete-item active">First option</span>
+          <span class="input-autocomplete-item active">First option</span>
+          <span class="input-autocomplete-item active">First option</span>
+          <span class="input-autocomplete-item active">First option</span>
+          <span class="input-autocomplete-item active">First option</span>
+          <span class="input-autocomplete-item active">First option</span>
+        </div>
+      </div>
+      <input type="text" placeholder="My input">
+    </div>
+
+    <textarea>Hello world</textarea>
+
     <h2>Modal</h2>
     <a @click="$refs.modalRef.open()">OPEN</a>
     <modal ref="modalRef" :show="false" size="large" :closeMask="true" :closeIcon="true" @close="tests()">
@@ -12,7 +41,7 @@
       <h1>{{ page.title }}</h1>
       <p>{{ page.content }}</p>
 
-      <alert color="green" :close="true" :fixed="true" ref="alerting">H---sGi</alert>
+      <alert color="blue" :close="true" :fixed="true" ref="alerting">H---sGi</alert>
 
 
 
@@ -54,7 +83,7 @@
         <div class="card-links">
           <a href="#">Daily post</a>
           <a href="#">Gifs</a>
-          <a href="#">Schedule    </a>
+          <a href="#">Schedule</a>
         </div>
       </div>
 
