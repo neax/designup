@@ -94,7 +94,7 @@ textarea {
 
 :--all-text-inputs,
 select[multiple] {
-  padding: calc(var(--spacing) / 2) calc(var(--spacing) / 3);
+  padding: calc(var(--spacing) / 2);
   line-height: 1;
 }
 
