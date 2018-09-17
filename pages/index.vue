@@ -1,6 +1,14 @@
 <template>
   <div>
 
+    <autocomplete
+      :items="items"
+      :input-attrs="{ placeholder: 'Autocomplete, type here...' }"
+      @change="fetchItems"
+      @item-selected="itemSelected" />
+
+    <hr>
+
     <h3>ionput</h3>
     <a class="button purple outline">Hi</a>
     <a class="button red">Hi</a>
@@ -108,12 +116,15 @@
 import marked from 'marked'
 import Alert from '../src/components/Alert'
 import Modal from '../src/components/Modal'
+import Autocomplete from '../src/components/Autocomplete'
 
 export default {
-  components: { Alert, Modal },
+  components: { Alert, Modal, Autocomplete },
   data: function() {
     return {
-      pages: [require('./../static/docs/alert')]
+      pages: [require('./../static/docs/alert')],
+      items: [],
+      selectedObject: {}
     }
   },
   created() {},
@@ -122,7 +133,30 @@ export default {
       return marked(input, { sanitize: true })
     },
     foo() {},
-    tests() {}
+    tests() {},
+
+    fetchItems(text) {
+      if (text) {
+        this.items = [
+          {
+            id: 1,
+            name: 'yeahhh'
+          },
+          {
+            id: 2,
+            name: 'heeeey'
+          }
+        ]
+      } else {
+        this.items = []
+        this.selectedObject = {}
+      }
+    },
+
+    itemSelected(item) {
+      this.selectedObject = item
+      this.items = []
+    }
   }
 }
 </script>
