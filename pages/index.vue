@@ -5,6 +5,17 @@
     <a class="button purple outline">Hi</a>
     <a class="button red">Hi</a>
     <div class="input-group">
+      <input type="text" name="" value="Código">
+      <input type="text" name="" value="Nombre">
+      <input type="text" name="" value="Apellido">
+      <input type="text" name="" value="DNI">
+      <select class="" name="">
+        <option value="">Pan con queso</option>
+        <option value="">Pan con palta</option>
+        <option value="">Pan con atún</option>
+      </select>
+    </div>
+    <div class="input-group">
       <a class="button light-gray disabled">Hi</a>
       <a class="button light-gray active">Hi</a>
       <a class="button light-gray">Hi</a>
