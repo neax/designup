@@ -13,7 +13,7 @@
 }
 
 .card-image {
-  border-radius: calc(var(--base-border-radius - 1px)) calc(var(--base-border-radius - 1px)) 0 0;
+  border-radius: calc(var(--base-border-radius) - 1px) calc(var(--base-border-radius) - 1px) 0 0;
 
   display: block;
   width: 100%;
