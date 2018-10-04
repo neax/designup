@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Navbar title="Attendance" :image="image">
+    <Navbar title="Attendance">
+      <img slot="logo" class="logo" src="~/assets/github.png">
+
       <template slot="right">
         <a href="#">Icon 1</a>
 
@@ -21,14 +23,17 @@ import Navbar from '~~/src/components/NavBar'
 import NavDropdown from '../src/components/NavDropdown'
 
 export default {
-  data() {
-    return {
-      image: { url: require('~/assets/github.png'), alt: 'someAlt' }
-    }
-  },
   components: {
     Navbar,
     NavDropdown
   }
 }
 </script>
+
+<style scoped>
+.logo {
+  width: 33px;
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+</style>

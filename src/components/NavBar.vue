@@ -3,11 +3,8 @@
     <nav>
       <h1 class="nav-logo">
         <nuxt-link to="/">
-          <slot name="logo">
-            <img v-if="image.url" :src="image.url" :alt="image.alt">
-            <font-awesome-icon v-else-if="icon" :icon="icon" />
-          </slot>
-          {{ title }}
+          <slot name="logo"></slot>
+          <font-awesome-icon v-if="icon" :icon="icon" /> {{ title }}
         </nuxt-link>
       </h1>
 
@@ -28,11 +25,7 @@
 export default {
   props: {
     title: { type: String },
-    icon: { type: String },
-    image: {
-      type: Object,
-      default: () => { return {} }
-    },
+    icon: { type: String }
   },
 
   data() {
@@ -46,12 +39,5 @@ export default {
 <style scoped>
 .nav-logo {
   display: inline;
-
-  & img {
-    width: 33px;
-    height: 33px;
-    vertical-align: middle;
-    margin-bottom: 5px;
-  }
 }
 </style>
