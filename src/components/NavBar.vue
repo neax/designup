@@ -1,11 +1,16 @@
 <template lang="html">
   <div>
     <nav>
-      <span class="nav-logo">
+      <h1 class="nav-logo">
         <nuxt-link to="/">
-          <font-awesome-icon :icon="icon" /> {{ title }}
+          <slot name="logo">
+            <img v-if="image.url" :src="image.url" :alt="image.alt">
+            <font-awesome-icon v-else-if="icon" :icon="icon" />
+          </slot>
+          {{ title }}
         </nuxt-link>
-      </span>
+      </h1>
+
       <a v-on:click="responsive = !responsive" class="nav-responsive-button" id="navResponsiveButton"><font-awesome-icon icon="bars" /></a>
 
       <div class="nav-left" :class="{ 'nav-responsive' : responsive }">
@@ -21,7 +26,15 @@
 
 <script>
 export default {
-  props: ['title', 'icon'],
+  props: {
+    title: { type: String },
+    icon: { type: String },
+    image: {
+      type: Object,
+      default: () => { return {} }
+    },
+  },
+
   data() {
     return {
       responsive: false
@@ -29,3 +42,16 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.nav-logo {
+  display: inline;
+
+  & img {
+    width: 33px;
+    height: 33px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+}
+</style>

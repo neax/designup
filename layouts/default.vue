@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar title="Attendance" icon="times">
+    <Navbar title="Attendance" :image="image">
       <template slot="right">
         <a href="#">Icon 1</a>
 
@@ -9,6 +9,7 @@
         </NavDropdown>
       </template>
     </Navbar>
+
     <main>
       <nuxt/>
     </main>
@@ -20,6 +21,11 @@ import Navbar from '~~/src/components/NavBar'
 import NavDropdown from '../src/components/NavDropdown'
 
 export default {
+  data() {
+    return {
+      image: { url: require('~/assets/github.png'), alt: 'someAlt' }
+    }
+  },
   components: {
     Navbar,
     NavDropdown
