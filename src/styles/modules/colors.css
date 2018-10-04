@@ -1,99 +1,99 @@
 .primary {
-  --color-1: var(--primary);
+  --color-1: color-mod(var(--primary));
   --color-1-s-125: color-mod(var(--primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--primary) shade(5%));
   --color-1-a-005: color-mod(var(--primary) alpha(0.5));
-  --color-2: var(--secondary);
+  --color-2: color-mod(var(--secondary));
 }
 
 .blue {
-  --color-1: var(--blue-primary);
+  --color-1: color-mod(var(--blue-primary));
   --color-1-s-125: color-mod(var(--blue-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--blue-primary) shade(5%));
   --color-1-a-005: color-mod(var(--blue-primary) alpha(0.5));
-  --color-2: var(--blue-secondary);
+  --color-2: color-mod(var(--blue-secondary));
 }
 .green {
-  --color-1: var(--green-primary);
+  --color-1: color-mod(var(--green-primary));
   --color-1-s-125: color-mod(var(--green-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--green-primary) shade(5%));
   --color-1-a-005: color-mod(var(--green-primary) alpha(0.5));
-  --color-2: var(--green-secondary);
+  --color-2: color-mod(var(--green-secondary));
 }
 .red {
-  --color-1: var(--red-primary);
+  --color-1: color-mod(var(--red-primary));
   --color-1-s-125: color-mod(var(--red-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--red-primary) shade(5%));
   --color-1-a-005: color-mod(var(--red-primary) alpha(0.5));
-  --color-2: var(--red-secondary);
+  --color-2: color-mod(var(--red-secondary));
 }
 .orange {
-  --color-1: var(--orange-primary);
+  --color-1: color-mod(var(--orange-primary));
   --color-1-s-125: color-mod(var(--orange-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--orange-primary) shade(5%));
   --color-1-a-005: color-mod(var(--orange-primary) alpha(0.5));
-  --color-2: var(--orange-secondary);
+  --color-2: color-mod(var(--orange-secondary));
 }
 .purple {
-  --color-1: var(--purple-primary);
+  --color-1: color-mod(var(--purple-primary));
   --color-1-s-125: color-mod(var(--purple-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--purple-primary) shade(5%));
   --color-1-a-005: color-mod(var(--purple-primary) alpha(0.5));
-  --color-2: var(--purple-secondary);
+  --color-2: color-mod(var(--purple-secondary));
 }
 .sky-blue {
-  --color-1: var(--sky-blue-primary);
+  --color-1: color-mod(var(--sky-blue-primary));
   --color-1-s-125: color-mod(var(--sky-blue-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--sky-blue-primary) shade(5%));
   --color-1-a-005: color-mod(var(--sky-blue-primary) alpha(0.5));
-  --color-2: var(--sky-blue-secondary);
+  --color-2: color-mod(var(--sky-blue-secondary));
 }
 .yellow {
-  --color-1: var(--yellow-primary);
+  --color-1: color-mod(var(--yellow-primary));
   --color-1-s-125: color-mod(var(--yellow-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--yellow-primary) shade(5%));
   --color-1-a-005: color-mod(var(--yellow-primary) alpha(0.5));
-  --color-2: var(--yellow-secondary);
+  --color-2: color-mod(var(--yellow-secondary));
 }
 .brown {
-  --color-1: var(--brown-primary);
+  --color-1: color-mod(var(--brown-primary));
   --color-1-s-125: color-mod(var(--brown-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--brown-primary) shade(5%));
   --color-1-a-005: color-mod(var(--brown-primary) alpha(0.5));
-  --color-2: var(--brown-secondary);
+  --color-2: color-mod(var(--brown-secondary));
 }
 .white {
-  --color-1: var(--white-primary);
+  --color-1: color-mod(var(--white-primary));
   --color-1-s-125: color-mod(var(--white-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--white-primary) shade(5%));
   --color-1-a-005: color-mod(var(--white-primary) alpha(0.5));
-  --color-2: var(--white-secondary);
+  --color-2: color-mod(var(--white-secondary));
 }
 .black {
-  --color-1: var(--black-primary);
+  --color-1: color-mod(var(--black-primary));
   --color-1-s-125: color-mod(var(--black-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--black-primary) shade(5%));
   --color-1-a-005: color-mod(var(--black-primary) alpha(0.5));
-  --color-2: var(--black-secondary);
+  --color-2: color-mod(var(--black-secondary));
 }
 .dark-gray {
-  --color-1: var(--dark-gray-primary);
+  --color-1: color-mod(var(--dark-gray-primary));
   --color-1-s-125: color-mod(var(--dark-gray-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--dark-gray-primary) shade(5%));
   --color-1-a-005: color-mod(var(--dark-gray-primary) alpha(0.5));
-  --color-2: var(--dark-gray-secondary);
+  --color-2: color-mod(var(--dark-gray-secondary));
 }
 .medium-gray {
-  --color-1: var(--medium-gray-primary);
+  --color-1: color-mod(var(--medium-gray-primary));
   --color-1-s-125: color-mod(var(--medium-gray-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--medium-gray-primary) shade(5%));
   --color-1-a-005: color-mod(var(--medium-gray-primary) alpha(0.5));
-  --color-2: var(--medium-gray-secondary);
+  --color-2: color-mod(var(--medium-gray-secondary));
 }
 .light-gray {
-  --color-1: var(--light-gray-primary);
+  --color-1: color-mod(var(--light-gray-primary));
   --color-1-s-125: color-mod(var(--light-gray-primary) shade(12.5%));
   --color-1-s-050: color-mod(var(--light-gray-primary) shade(5%));
   --color-1-a-005: color-mod(var(--light-gray-primary) alpha(0.5));
-  --color-2: var(--light-gray-secondary);
+  --color-2: color-mod(var(--light-gray-secondary));
 }
