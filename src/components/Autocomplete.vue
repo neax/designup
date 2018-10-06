@@ -1,10 +1,12 @@
 <template>
   <div>
     <div class="input-autocomplete">
-      <input type="search" v-model="searchText" v-bind="inputAttrs" 
-        :class="inputAttrs.class || inputClass"
-        :placeholder="inputAttrs.placeholder || placeholder"
-        :disabled="inputAttrs.disabled || disabled"
+      <input
+        :value="value"
+        :type="type"
+        :class="inputClass"
+        :placeholder="placeholder"
+        :disabled="disabled"
         @input="onInputChange">
 
       <div class="input-autocomplete-items" v-if="items.length">
@@ -21,22 +23,15 @@ import { debounce } from 'lodash'
 export default {
   name: 'autocomplete',
   props: {
+    value: String,
+    type: { type: String, default: 'search' },
+    inputClass: String,
+    placeholder: String,
+    disabled: null,
     items: Array,
     getLabel: {
       type: Function,
       default: item => item.name
-    },
-    inputAttrs: {
-      type: Object,
-      default: () => { return {} }
-    },
-    placeholder: String,
-    inputClass: {
-      type: String,
-      default: 'v-autocomplete-input'
-    },
-    disabled: {
-      default: false
     }
   },
 
@@ -47,13 +42,15 @@ export default {
   },
 
   methods: {
-    onInputChange: debounce(function() {
-      this.$emit('change', this.searchText)
+    onInputChange: debounce(function($event) {
+      this.$emit('change', $event.target.value)
     }, 400),
 
     onSelect(item) {
-      this.searchText = this.getLabel(item)
+      let label = this.getLabel(item)
+      // this.searchText = this.getLabel(item)
       this.$emit('item-selected', item)
+      this.$emit('input', label)
     }
   }
 }

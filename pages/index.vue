@@ -2,10 +2,13 @@
   <div>
 
     <autocomplete
+      v-model="autocompleteModel"
       :items="items"
-      :input-attrs="{ placeholder: 'Autocomplete, type here...' }"
       @change="fetchItems"
       @item-selected="itemSelected" />
+
+    <strong>{{ autocompleteModel }}</strong><br>
+    <strong>{{ selectedObject }}</strong>
 
     <hr>
 
@@ -124,7 +127,8 @@ export default {
     return {
       pages: [require('./../static/docs/alert')],
       items: [],
-      selectedObject: {}
+      selectedObject: {},
+      autocompleteModel: ''
     }
   },
   created() {},
@@ -155,6 +159,9 @@ export default {
 
     itemSelected(item) {
       this.selectedObject = item
+      this.$nextTick(() => {
+        this.autocompleteModel = `${this.autocompleteModel} (modified)`
+      })
       this.items = []
     }
   }
