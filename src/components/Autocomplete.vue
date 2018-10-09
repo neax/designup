@@ -7,9 +7,13 @@
         :class="inputClass"
         :placeholder="placeholder"
         :disabled="disabled"
-        @input="onInputChange">
+        @focus="onFocus"
+        @blur="onBlur"
+        @input="onInput($event); onInputChange($event)">
 
-      <div class="input-autocomplete-items" v-if="items.length">
+      <div class="input-autocomplete-items" v-if="showItems"
+        @mouseover="itemsHover = true"
+        @mouseleave="itemsHover = false">
         <span class="input-autocomplete-item" v-for="item in items" :key="item.id"
           @click="onSelect(item)">{{ getLabel(item) }}</span>
       </div>
@@ -37,20 +41,36 @@ export default {
 
   data() {
     return {
-      searchText: ''
+      showItems: false,
+      itemsHover: false
     }
   },
 
   methods: {
+    onInput($event) {
+      this.$emit('input', $event.target.value)
+    },
+
     onInputChange: debounce(function($event) {
       this.$emit('change', $event.target.value)
     }, 400),
 
     onSelect(item) {
-      let label = this.getLabel(item)
-      // this.searchText = this.getLabel(item)
+      this.showItems = false
       this.$emit('item-selected', item)
-      this.$emit('input', label)
+      this.$emit('input', this.getLabel(item))
+    },
+
+    onFocus() {
+      this.showItems = true
+      this.$emit('focus')
+    },
+
+    onBlur() {
+      if (!this.itemsHover) {
+        this.showItems = false
+        this.$emit('blur')
+      }
     }
   }
 }

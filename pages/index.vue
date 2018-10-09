@@ -1,15 +1,14 @@
 <template>
   <div>
 
+    <hr>
+    <strong>autocompleteModel: {{ autocompleteModel }}</strong><br>
+    <strong>selectedObject: {{ selectedObject }}</strong><br>
     <autocomplete
       v-model="autocompleteModel"
       :items="items"
       @change="fetchItems"
       @item-selected="itemSelected" />
-
-    <strong>{{ autocompleteModel }}</strong><br>
-    <strong>{{ selectedObject }}</strong>
-
     <hr>
 
     <h3>ionput</h3>
@@ -162,7 +161,6 @@ export default {
       this.$nextTick(() => {
         this.autocompleteModel = `${this.autocompleteModel} (modified)`
       })
-      this.items = []
     }
   }
 }
