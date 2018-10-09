@@ -2,13 +2,22 @@
   <div>
 
     <hr>
+
     <strong>autocompleteModel: {{ autocompleteModel }}</strong><br>
     <strong>selectedObject: {{ selectedObject }}</strong><br>
     <autocomplete
       v-model="autocompleteModel"
       :items="items"
       @change="fetchItems"
-      @item-selected="itemSelected" />
+      @item-selected="itemSelected">
+
+      <div slot="autocomplete-items" slot-scope="{ items, onSelect, getLabel }">
+        <span v-for="item in items" class="input-autocomplete-item">
+          <div @click="onSelect(item)">{{ getLabel(item) }}</div>
+        </span>
+      </div>
+    </autocomplete>
+
     <hr>
 
     <h3>ionput</h3>

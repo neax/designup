@@ -14,8 +14,10 @@
       <div class="input-autocomplete-items" v-if="showItems"
         @mouseover="itemsHover = true"
         @mouseleave="itemsHover = false">
-        <span class="input-autocomplete-item" v-for="item in items" :key="item.id"
-          @click="onSelect(item)">{{ getLabel(item) }}</span>
+        <slot name="autocomplete-items" :items="items" :onSelect="onSelect" :getLabel="getLabel">
+          <span class="input-autocomplete-item" v-for="item in items" :key="item.id"
+            @click="onSelect(item)">{{ getLabel(item) }}</span>
+        </slot>
       </div>
     </div>
   </div>
