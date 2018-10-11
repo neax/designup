@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Navbar title="Attendance" icon="times">
+    <Navbar title="Attendance" color="red" icon="bars">
+
       <template slot="right">
         <a href="#">Icon 1</a>
 
@@ -9,6 +10,7 @@
         </NavDropdown>
       </template>
     </Navbar>
+
     <main>
       <nuxt/>
     </main>

@@ -1,11 +1,12 @@
 <template lang="html">
   <div>
-    <nav>
+    <nav :class="color">
       <span class="nav-logo">
-        <nuxt-link to="/">
-          <font-awesome-icon :icon="icon" /> {{ title }}
+        <nuxt-link :to="to">
+          <font-awesome-icon v-if="icon" :icon="icon" /> {{ title }}
         </nuxt-link>
       </span>
+
       <a v-on:click="responsive = !responsive" class="nav-responsive-button" id="navResponsiveButton"><font-awesome-icon icon="bars" /></a>
 
       <div class="nav-left" :class="{ 'nav-responsive' : responsive }">
@@ -21,7 +22,13 @@
 
 <script>
 export default {
-  props: ['title', 'icon'],
+  props: {
+    title: { type: String },
+    icon: { type: String },
+    color: { type: String, default: 'primary' },
+    to: { type: String, default: '/' }
+  },
+
   data() {
     return {
       responsive: false

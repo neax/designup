@@ -10,7 +10,7 @@ nav {
   text-align: center;
   width: 100%;
 
-  background-color: var(--primary);
+  background-color: var(--color-1);
 
   @media (--medium-screen-up) {
     text-align: inherit;
@@ -19,18 +19,18 @@ nav {
   & a {
     padding: 0 calc(var(--spacing) / 2);
 
-    color: var(--secondary);
+    color: var(--color-2);
     display: inline-block;
     line-height: var(--navbar-height);
 
     &:hover {
-      background-color: color-mod(var(--primary) shade(5%));
-      color: var(--secondary);
+      background-color: var(--color-1-s-050);
+      color: var(--color-2);
       text-decoration: none;
     }
 
     &.active {
-      background-color: color-mod(var(--primary) shade(5%));
+      background-color: var(--color-1-s-050);
     }
   }
 
@@ -103,7 +103,7 @@ nav {
 
   & i,
   & svg {
-    margin-right: calc(var(--spacing) / 8);
+    margin-right: calc(var(--spacing) / 6);
   }
 }
 
