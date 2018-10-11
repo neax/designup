@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar title="Attendance">
+    <Navbar title="Attendance" color="red">
       <img slot="logo" class="logo" src="~/assets/github.png">
 
       <template slot="right">
