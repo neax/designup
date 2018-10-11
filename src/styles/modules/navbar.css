@@ -103,7 +103,7 @@ nav {
 
   & i,
   & svg {
-    margin-right: calc(var(--spacing) / 8);
+    margin-right: calc(var(--spacing) / 6);
   }
 }
 

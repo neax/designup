@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Navbar title="Attendance" color="red">
-      <img slot="logo" class="logo" src="~/assets/github.png">
+    <Navbar title="Attendance" color="red" icon="bars">
 
       <template slot="right">
         <a href="#">Icon 1</a>
@@ -29,11 +28,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.logo {
-  width: 33px;
-  vertical-align: middle;
-  margin-bottom: 3px;
-}
-</style>
