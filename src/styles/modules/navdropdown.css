@@ -13,11 +13,16 @@
   }
 }
 
+.nav-right {
+  & a {
+    text-align: left !important;
+  }
+}
+
 .nav-dropdown-content {
+  background-color: var(--color-1);
   position: absolute;
   right: 0;
-
-  background-color: var(--color-1);
   display: none;
   min-width: 120px;
   width: 100%;
