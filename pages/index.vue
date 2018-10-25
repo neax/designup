@@ -37,6 +37,9 @@
         </div>
       </div>
       <input type="text" placeholder="My input">
+      <a class="button primary icon-button">
+        <font-awesome-icon :icon="['fas', 'bars']" />
+      </a>
     </div>
 
     <textarea>Hello world</textarea>

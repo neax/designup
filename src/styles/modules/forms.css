@@ -175,6 +175,19 @@ select {
       z-index: 3;
     }
   }
+
+  & .input-autocomplete {
+    line-height: 17px;
+    margin-right: -1px;
+  }
+
+  & .icon-button {
+    padding: calc(var(--spacing) / 3) calc(var(--spacing) / 2);
+
+    & svg {
+      vertical-align: middle;
+    }
+  }
 }
 
 .input-autocomplete {
