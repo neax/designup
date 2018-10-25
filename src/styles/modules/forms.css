@@ -91,7 +91,7 @@ textarea {
 
 :--all-text-inputs,
 select[multiple] {
-  padding: calc(var(--spacing) / 2) calc(var(--spacing) / 3);
+  padding: calc(var(--spacing) / 2);
   line-height: 1;
 }
 
@@ -110,6 +110,14 @@ input[type='radio'] {
 input[type='file'] {
   margin-bottom: calc(var(--spacing) / 2);
   width: 100%;
+}
+
+select[multiple],
+select {
+  padding: calc(var(--spacing) / 2);
+  -webkit-appearance: none;
+  background: var(--white) url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right calc(var(--spacing) / 2) center !important;
+  background-size: 8px 10px !important;
 }
 
 :--all-buttons,
@@ -134,6 +142,7 @@ select {
 
 .input-group {
   display: flex;
+  position: relative;
 
   & .button {
     padding: calc(var(--spacing) / 3);
@@ -141,9 +150,17 @@ select {
     margin-bottom: calc(var(--spacing) / 2);
   }
 
+  & select {
+    margin-top: 0;
+    background: var(--white);
+  }
+
   & :--all-text-inputs,
   & select[multiple],
+  & select,
   & .button {
+    margin-left: -1px;
+
     &:not(:last-child) {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -152,6 +169,23 @@ select {
     &:not(:first-child) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+    }
+
+    &:focus {
+      z-index: 3;
+    }
+  }
+
+  & .input-autocomplete {
+    line-height: 17px;
+    margin-right: -1px;
+  }
+
+  & .icon-button {
+    padding: calc(var(--spacing) / 3) calc(var(--spacing) / 2);
+
+    & svg {
+      vertical-align: middle;
     }
   }
 }
