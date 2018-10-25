@@ -1,5 +1,3 @@
-import customMedia from './src/variables/custom-media'
-
 export default {
   head: {
     title: 'Designup',
@@ -17,16 +15,16 @@ export default {
     postcss: [
       require('postcss-preset-env')({
         stage: 0,
+        preserve: false,
+        importFrom: [
+          {
+            customProperties: require('./src/variables/variables')({ theme: 'green' }),
+            customMedia: require('./src/variables/custom-media')
+          }
+        ],
         features: {
           'color-mod-function': {
             unresolved: 'ignore'
-          },
-          'custom-properties': {
-            preserve: false,
-            variables: require('./src/variables/variables')({ theme: 'green' })
-          },
-          'custom-media-queries': {
-            extensions: customMedia
           }
         }
       })
