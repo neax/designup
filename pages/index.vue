@@ -19,11 +19,9 @@
       <a class="button light-gray disabled">Hi</a>
       <a class="button light-gray active">Hi</a>
       <a class="button light-gray">Hi</a>
-
       <input type="text" placeholder="My input">
       <div class="input-autocomplete" style="width: 100%">
         <input type="text" style="border-radius: 0" placeholder="My input">
-
         <div class="input-autocomplete-items">
           <span class="input-autocomplete-item active">First option and this is the rightn asd asd <span class="badge red">hi</span> <span class="right font-medium">15 items</span></span>
           <span class="input-autocomplete-item active">Seconds option</span>
@@ -41,9 +39,7 @@
         <font-awesome-icon :icon="['fas', 'bars']" />
       </a>
     </div>
-
     <textarea>Hello world</textarea>
-
     <h2>Modal</h2>
     <a @click="$refs.modalRef.open()">OPEN</a>
     <modal ref="modalRef" :show="false" size="large" :closeMask="true" :closeIcon="true" @close="tests()">

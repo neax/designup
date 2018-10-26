@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .icon-left {
   margin-right: calc(var(--spacing) / 4);
