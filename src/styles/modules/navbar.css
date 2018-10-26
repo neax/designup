@@ -75,7 +75,8 @@ nav {
 
 .nav-left {
   @media (--medium-screen-up) {
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: row;
   }
 }
 

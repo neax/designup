@@ -13,6 +13,14 @@
   }
 }
 
+.nav-left {
+  & .nav-dropdown-content {
+    & a {
+      text-align: left;
+    }
+  }
+}
+
 .nav-right {
   & .nav-dropdown-content {
     right: 0;
