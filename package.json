@@ -1,7 +1,7 @@
 {
   "name": "@neax/designup",
   "main": "lib/module.js",
-  "version": "0.2.0-alpha6",
+  "version": "0.2.0-alpha7",
   "license": "MIT",
   "scripts": {
     "dev": "nuxt"
