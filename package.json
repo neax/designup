@@ -1,7 +1,7 @@
 {
   "name": "@neax/designup",
   "main": "lib/module.js",
-  "version": "0.2.0-alpha3",
+  "version": "0.2.0-alpha7",
   "license": "MIT",
   "scripts": {
     "dev": "nuxt"
@@ -11,22 +11,21 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.6.1",
+    "eslint": "^5.9.0",
     "eslint-plugin-vue": "^4.7.1",
     "marked": "^0.5.1",
-    "nuxt": "^2.1.0",
-    "prettier": "^1.14.3"
+    "nuxt": "^2.2.0",
+    "prettier": "^1.15.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.4",
-    "@fortawesome/free-solid-svg-icons": "^5.3.1",
-    "@fortawesome/vue-fontawesome": "^0.1.1",
-    "normalize.css": "^8.0.0",
-    "postcss-preset-env": "^6.0.10",
-    "lodash": "^4.17.10"
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@fortawesome/vue-fontawesome": "^0.1.2",
+    "normalize.css": "^8.0.1",
+    "postcss-preset-env": "^6.4.0"
   },
   "prettier": {
-    "printWidth": "100",
+    "printWidth": 100,
     "semi": false,
     "singleQuote": true
   }

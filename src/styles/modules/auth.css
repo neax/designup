@@ -1,5 +1,5 @@
 .auth {
-  background-color: var(--primary);
+  background-color: var(--color-1);
   display: table;
   height: 100%;
   width: 100%;
@@ -16,7 +16,7 @@
   margin: 0 auto var(--spacing);
 
   & a {
-    color: var(--white);
+    color: var(--color-2);
   }
 }
 
