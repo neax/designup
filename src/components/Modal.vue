@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    </transition>
+  </transition>
 </template>
 
 <script>

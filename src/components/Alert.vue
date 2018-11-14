@@ -1,7 +1,9 @@
 <template lang="html">
   <transition name="fade" mode="out-in">
     <div class="alert" :class="[colorClass, { fixed }]" v-if="display">
-      <div class="alert-close" v-if="close" v-on:click="display = false"><font-awesome-icon icon="times" /></div>
+      <div class="alert-close" v-if="close" v-on:click="display = false">
+        <font-awesome-icon icon="times" />
+      </div>
       <slot></slot>
     </div>
   </transition>
