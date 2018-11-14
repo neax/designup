@@ -6,18 +6,16 @@
     ><br />
     <strong>selectedObject: {{ selectedObject }}</strong
     ><br />
+    <!-- v-model="autocompleteModel" -->
     <autocomplete
-      v-model="autocompleteModel"
       :items="items"
       @change="fetchItems"
-      @item-selected="itemSelected"
-    >
-      <div slot="autocomplete-items" slot-scope="{ items, onSelect, getLabel }">
-        <span v-for="item in items" class="input-autocomplete-item">
-          <div @click="onSelect(item)">{{ getLabel(item) }}</div>
-        </span>
-      </div>
-    </autocomplete>
+      @selected="itemSelected"
+      placeholder="Buscar"
+      :autoselect="2"
+      :additionalData="item => item.id"
+      :icon="item => 'bars'"
+    />
 
     <hr />
 
@@ -35,21 +33,23 @@
     <div class="input-group">
       <a class="button light-gray disabled">Hi</a> <a class="button light-gray active">Hi</a>
       <a class="button light-gray">Hi</a> <input type="text" placeholder="My input" />
-      <div class="input-autocomplete" style="width: 100%">
+      <div class="autocomplete" style="width: 100%">
         <input type="text" style="border-radius: 0" placeholder="My input" />
-        <div class="input-autocomplete-items">
-          <span class="input-autocomplete-item active"
-            >First option and this is the rightn asd asd <span class="badge red">hi</span>
-            <span class="right font-medium">15 items</span></span
-          >
-          <span class="input-autocomplete-item active">Seconds option</span>
-          <span class="input-autocomplete-item active">Third option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
+        <div class="autocomplete-items">
+          <span class="autocomplete-item active">
+            <!-- <span class="right font-medium">15 items</span> -->
+            <span class="autocomplete-item-icon"> <font-awesome-icon icon="times" /> </span> First
+            option a n a a s a n a a s a n a a s a n a a s a n a a s
+            <span class="autocomplete-item-addon">15 items</span>
+          </span>
+          <span class="autocomplete-item">Seconds option</span>
+          <span class="autocomplete-item">Third option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
         </div>
       </div>
       <input type="text" placeholder="My input" />
@@ -84,7 +84,7 @@
 
       <h2>Pagination</h2>
 
-      <div class="pagination"><a href="#">1</a> <a href="#">2</a></div>
+      <div class="pagination"><a href="#" class="active">1</a> <a href="#">2</a></div>
       <div class="breadcrumbs"><a href="#">Home</a> <a href="#">Index</a></div>
 
       <h2>Cards</h2>
@@ -155,8 +155,109 @@ export default {
           {
             id: 2,
             name: 'heeeey'
+          },
+          {
+            id: 'x',
+            name: 'Amazonas'
+          },
+          {
+            id: 'x',
+            name: 'Áncash'
+          },
+          {
+            id: 'x',
+            name: 'Apurímac'
+          },
+          {
+            id: 'x',
+            name: 'Arequipa'
+          },
+          {
+            id: 'x',
+            name: 'Ayacucho'
+          },
+          {
+            id: 'x',
+            name: 'Cajamarca'
+          },
+          {
+            id: 'x',
+            name: 'Callao'
+          },
+          {
+            id: 'x',
+            name: 'Cuzco'
+          },
+          {
+            id: 'x',
+            name: 'Huancavelica'
+          },
+          {
+            id: 'x',
+            name: 'Huánuco'
+          },
+          {
+            id: 'x',
+            name: 'Ica'
+          },
+          {
+            id: 'x',
+            name: 'Junín'
+          },
+          {
+            id: 'x',
+            name: 'La Libertad'
+          },
+          {
+            id: 'x',
+            name: 'Lambayeque'
+          },
+          {
+            id: 'x',
+            name: 'Lima (departamento)'
+          },
+          {
+            id: 'x',
+            name: 'Loreto'
+          },
+          {
+            id: 'x',
+            name: 'Madre de Dios'
+          },
+          {
+            id: 'x',
+            name: 'Moquegua'
+          },
+          {
+            id: 'x',
+            name: 'Pasco'
+          },
+          {
+            id: 'x',
+            name: 'Piura'
+          },
+          {
+            id: 'x',
+            name: 'Puno'
+          },
+          {
+            id: 'x',
+            name: 'San Martín'
+          },
+          {
+            id: 'x',
+            name: 'Tacna'
+          },
+          {
+            id: 'x',
+            name: 'Tumbes'
+          },
+          {
+            id: 'x',
+            name: 'Ucayali'
           }
-        ]
+        ].filter(obj => obj.name.toLowerCase().includes(text.toLowerCase()))
+        this.items.push({ id: 'new', name: 'Agregar nuevo' })
       } else {
         this.items = []
         this.selectedObject = {}
@@ -165,9 +266,11 @@ export default {
 
     itemSelected(item) {
       this.selectedObject = item
-      this.$nextTick(() => {
-        this.autocompleteModel = `${this.autocompleteModel} (modified)`
-      })
+      this.items = []
+      if (this.selectedObject && this.selectedObject.id === 'new') {
+        this.$refs.modalRef.open()
+        item.name = ''
+      }
     }
   }
 }
