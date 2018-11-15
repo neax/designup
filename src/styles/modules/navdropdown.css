@@ -46,8 +46,3 @@
 .nav-dropdown-icon-arrow {
   margin-left: calc(var(--spacing) / 6);
 }
-
-.nav-responsive {
-  & .nav-dropdown-content {
-  }
-}

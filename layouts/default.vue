@@ -2,6 +2,7 @@
   <div>
     <Navbar title="Attendance" color="red" icon="bars">
       <template slot="left">
+        <a href="#">Icon</a>
         <NavDropdown :title="{ name: 'Dropdown left', icon: 'bars' }" icon="true">
           <a href="#">First link</a>
         </NavDropdown>
@@ -17,7 +18,7 @@
         <NavDropdown title="Hello" icon="true"> <a href="#">First link</a> </NavDropdown>
       </template>
       <template slot="right">
-        <a href="#">Icon 1</a>
+        <a href="#">Icon 122 <span class="badge dark-gray small">Hi</span></a>
         <NavDropdown title="Example" icon="true"> <a href="#">First link</a> </NavDropdown>
       </template>
     </Navbar>

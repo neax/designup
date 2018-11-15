@@ -1,5 +1,5 @@
 :root {
-  --navbar-height: 54px;
+  --navbar-height: 52px;
 }
 
 nav {
@@ -8,20 +8,25 @@ nav {
   box-sizing: border-box;
   position: relative;
   text-align: center;
-  width: 100%;
+  width: 100vw;
 
   background-color: var(--color-1);
 
   @media (--medium-screen-up) {
     text-align: inherit;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
   }
 
   & a {
-    padding: 0 calc(var(--spacing) / 2);
+    padding: calc((var(--navbar-height) - var(--base-font-size)) / 2) calc(var(--spacing) / 2);
 
     color: var(--color-2);
     display: inline-block;
-    line-height: var(--navbar-height);
+    line-height: 1;
+    white-space: nowrap;
+    overflow-x: scroll;
 
     &:hover {
       background-color: var(--color-1-s-050);
@@ -40,12 +45,7 @@ nav {
   }
 
   & .badge {
-    padding: calc(var(--spacing) / 9) calc(var(--spacing) / 4);
-
-    font-size: 0.7rem;
-    line-height: var(--base-line-height);
-    margin-left: calc(var(--spacing) / 4);
-    vertical-align: middle;
+    display: inline;
   }
 }
 
@@ -67,22 +67,21 @@ nav {
 
 .nav-right {
   @media (--medium-screen-up) {
-    display: flex;
-    flex-direction: row;
-    float: right;
+    display: inline-flex;
+    flex-wrap: nowrap;
   }
 }
 
 .nav-left {
   @media (--medium-screen-up) {
     display: inline-flex;
-    flex-direction: row;
+    flex: auto;
+    flex-wrap: nowrap;
   }
 }
 
 .nav-responsive-button {
   float: right;
-  display: inline-block;
 
   @media (--medium-screen-up) {
     display: none;
@@ -92,14 +91,19 @@ nav {
 .nav-logo {
   font-size: var(--big-font-size);
   font-weight: var(--font-semi-bold);
+  padding: calc((var(--navbar-height) - var(--big-font-size)) / 2) calc(var(--spacing) / 2);
 
-  & a {
-    &:hover {
-      background-color: inherit;
-    }
-    &:active {
-      background-color: transparent;
-    }
+  @media (--medium-screen-up) {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+  }
+
+  &:hover {
+    background-color: inherit;
+  }
+  &:active {
+    background-color: transparent;
   }
 
   & i,
@@ -133,7 +137,6 @@ nav {
     border-radius: var(--base-border-radius);
     content: attr(data-notification);
     font-size: var(--small-font-size);
-    line-height: var(--base-line-height);
     padding: 0 calc(var(--spacing) / 6);
     text-align: center;
   }
