@@ -35,7 +35,7 @@
   display: none;
   min-width: 120px;
   width: 100%;
-  z-index: 999999;
+  z-index: 99999;
 
   & a {
     display: block;
@@ -45,9 +45,4 @@
 
 .nav-dropdown-icon-arrow {
   margin-left: calc(var(--spacing) / 6);
-}
-
-.nav-responsive {
-  & .nav-dropdown-content {
-  }
 }

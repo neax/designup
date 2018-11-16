@@ -1,5 +1,24 @@
 <template>
   <div>
+    <hr />
+
+    <strong>autocompleteModel: {{ autocompleteModel }}</strong
+    ><br />
+    <strong>selectedObject: {{ selectedObject }}</strong
+    ><br />
+    <!-- v-model="autocompleteModel" -->
+    <autocomplete
+      :items="items"
+      @change="fetchItems"
+      @selected="itemSelected"
+      placeholder="Buscar"
+      :autoselect="2"
+      :additionalData="item => item.id"
+      :icon="item => 'bars'"
+    />
+
+    <hr />
+
     <h3>ionput</h3>
     <a class="button purple outline">Hi</a> <a class="button red">Hi</a>
     <div class="input-group">
@@ -14,21 +33,23 @@
     <div class="input-group">
       <a class="button light-gray disabled">Hi</a> <a class="button light-gray active">Hi</a>
       <a class="button light-gray">Hi</a> <input type="text" placeholder="My input" />
-      <div class="input-autocomplete" style="width: 100%">
+      <div class="autocomplete" style="width: 100%">
         <input type="text" style="border-radius: 0" placeholder="My input" />
-        <div class="input-autocomplete-items">
-          <span class="input-autocomplete-item active"
-            >First option and this is the rightn asd asd <span class="badge red">hi</span>
-            <span class="right font-medium">15 items</span></span
-          >
-          <span class="input-autocomplete-item active">Seconds option</span>
-          <span class="input-autocomplete-item active">Third option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
-          <span class="input-autocomplete-item active">First option</span>
+        <div class="autocomplete-items">
+          <span class="autocomplete-item active">
+            <!-- <span class="right font-medium">15 items</span> -->
+            <span class="autocomplete-item-icon"> <font-awesome-icon icon="times" /> </span> First
+            option a n a a s a n a a s a n a a s a n a a s a n a a s
+            <span class="autocomplete-item-addon">15 items</span>
+          </span>
+          <span class="autocomplete-item">Seconds option</span>
+          <span class="autocomplete-item">Third option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
+          <span class="autocomplete-item">First option</span>
         </div>
       </div>
       <input type="text" placeholder="My input" />
@@ -63,7 +84,7 @@
 
       <h2>Pagination</h2>
 
-      <div class="pagination"><a href="#">1</a> <a href="#">2</a></div>
+      <div class="pagination"><a href="#" class="active">1</a> <a href="#">2</a></div>
       <div class="breadcrumbs"><a href="#">Home</a> <a href="#">Index</a></div>
 
       <h2>Cards</h2>
@@ -104,12 +125,16 @@
 import marked from 'marked'
 import Alert from '../src/components/Alert'
 import Modal from '../src/components/Modal'
+import Autocomplete from '../src/components/Autocomplete'
 
 export default {
-  components: { Alert, Modal },
+  components: { Alert, Modal, Autocomplete },
   data: function() {
     return {
-      pages: [require('./../static/docs/alert')]
+      pages: [require('./../static/docs/alert')],
+      items: [],
+      selectedObject: {},
+      autocompleteModel: ''
     }
   },
   created() {},
@@ -118,8 +143,34 @@ export default {
       return marked(input, { sanitize: true })
     },
     foo() {},
-    tests() {
-      ya
+    tests() {},
+
+    fetchItems(text) {
+      if (text) {
+        this.items = [
+          {
+            id: 1,
+            name: 'yeahhh'
+          },
+          {
+            id: 2,
+            name: 'heeeey'
+          }
+        ].filter(obj => obj.name.toLowerCase().includes(text.toLowerCase()))
+        this.items.push({ id: 'new', name: 'Agregar nuevo' })
+      } else {
+        this.items = []
+        this.selectedObject = {}
+      }
+    },
+
+    itemSelected(item) {
+      this.selectedObject = item
+      this.items = []
+      if (this.selectedObject && this.selectedObject.id === 'new') {
+        this.$refs.modalRef.open()
+        item.name = ''
+      }
     }
   }
 }

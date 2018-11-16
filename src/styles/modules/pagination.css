@@ -5,8 +5,8 @@
 .pagination {
   & a {
     padding: calc(var(--spacing) / 3) calc(var(--spacing) / 2);
-    border-radius: --var(base-border-radius);
-    color: --var(dark-gray);
+    border-radius: var(--base-border-radius);
+    color: var(--dark-gray);
     font-weight: var(--font-semi-bold);
 
     &:hover,

@@ -1,16 +1,17 @@
 <template lang="html">
   <div>
     <nav :class="color">
-      <span class="nav-logo">
-        <nuxt-link :to="to"> <font-awesome-icon v-if="icon" :icon="icon" /> {{ title }} </nuxt-link>
-      </span>
+      <nuxt-link :to="to" class="nav-logo">
+        <font-awesome-icon v-if="icon" :icon="icon" /> {{ title }}
+      </nuxt-link>
 
       <a
         v-on:click="responsive = !responsive"
         class="nav-responsive-button"
         id="navResponsiveButton"
-        ><font-awesome-icon icon="bars"
-      /></a>
+      >
+        <font-awesome-icon icon="bars" />
+      </a>
 
       <div class="nav-left" :class="{ 'nav-responsive': responsive }">
         <slot name="left"></slot>
