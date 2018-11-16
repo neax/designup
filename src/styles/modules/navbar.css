@@ -3,30 +3,23 @@
 }
 
 nav {
-  padding: 0 calc(var(--spacing) / 2);
-  clearfix: both;
-  box-sizing: border-box;
-  position: relative;
-  text-align: center;
-  width: 100vw;
-
   background-color: var(--color-1);
+  padding: 0 calc(var(--spacing) / 2);
+  text-align: center;
 
   @media (--medium-screen-up) {
-    text-align: inherit;
     display: flex;
-    flex-direction: row;
+    text-align: left;
     align-content: space-around;
+    overflow-x: scroll;
   }
 
   & a {
     padding: calc((var(--navbar-height) - var(--base-font-size)) / 2) calc(var(--spacing) / 2);
-
     color: var(--color-2);
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
-    overflow-x: scroll;
 
     &:hover {
       background-color: var(--color-1-s-050);
@@ -51,11 +44,10 @@ nav {
 
 .nav-right,
 .nav-left {
-  text-align: center;
   display: none;
 
-  & a {
-    display: inline-block;
+  @media (--medium-screen-up) {
+    display: inline-flex;
   }
 
   &.nav-responsive {
@@ -65,24 +57,15 @@ nav {
   }
 }
 
-.nav-right {
-  @media (--medium-screen-up) {
-    display: inline-flex;
-    flex-wrap: nowrap;
-  }
-}
-
 .nav-left {
   @media (--medium-screen-up) {
-    display: inline-flex;
     flex: auto;
-    flex-wrap: nowrap;
   }
 }
 
 .nav-responsive-button {
   float: right;
-
+  display: inline-block;
   @media (--medium-screen-up) {
     display: none;
   }
@@ -92,12 +75,6 @@ nav {
   font-size: var(--big-font-size);
   font-weight: var(--font-semi-bold);
   padding: calc((var(--navbar-height) - var(--big-font-size)) / 2) calc(var(--spacing) / 2);
-
-  @media (--medium-screen-up) {
-    display: inline-flex;
-    flex-wrap: nowrap;
-    overflow-x: visible;
-  }
 
   &:hover {
     background-color: inherit;
