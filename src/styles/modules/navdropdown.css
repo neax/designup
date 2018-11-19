@@ -34,7 +34,7 @@
   left: 0;
   display: none;
   min-width: 120px;
-  width: 100%;
+  width: max-content;
   z-index: 99999;
 
   & a {
