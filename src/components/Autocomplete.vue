@@ -1,42 +1,40 @@
 <template>
-  <div>
-    <div class="autocomplete">
-      <input
-        :value="value"
-        :placeholder="placeholder"
-        :disabled="disabled"
-        @focus="showItems = true"
-        @blur="showItems = itemsHover || false"
-        @input="onInput($event)"
-        @keyup.enter="selectIndex"
-        @keydown.down.prevent="downIndex"
-        @keydown.up.prevent="upIndex"
-        @keydown.esc="hideItems"
-        @keydown.tab="hideItems"
-      />
+  <div class="autocomplete">
+    <input
+      :value="value"
+      :placeholder="placeholder"
+      :disabled="disabled"
+      @focus="showItems = true"
+      @blur="showItems = itemsHover || false"
+      @input="onInput($event)"
+      @keyup.enter="selectIndex"
+      @keydown.down.prevent="downIndex"
+      @keydown.up.prevent="upIndex"
+      @keydown.esc="hideItems"
+      @keydown.tab="hideItems"
+    />
 
-      <div
-        class="autocomplete-items"
-        v-if="showItems"
-        @mouseover="itemsHover = true"
-        @mouseleave="itemsHover = false"
+    <div
+      class="autocomplete-items"
+      v-if="showItems"
+      @mouseover="itemsHover = true"
+      @mouseleave="itemsHover = false"
+    >
+      <span
+        class="autocomplete-item"
+        :class="{ active: selectedIndex === index }"
+        v-for="(item, index) in items"
+        :key="`item-${index}`"
+        @click="select(item)"
       >
-        <span
-          class="autocomplete-item"
-          :class="{ active: selectedIndex === index }"
-          v-for="(item, index) in items"
-          :key="`item-${index}`"
-          @click="select(item)"
-        >
-          <span class="autocomplete-item-icon" v-if="icon && icon(item)">
-            <font-awesome-icon :icon="icon(item)" />
-          </span>
-          {{ label(item) }}
-          <span class="autocomplete-item-addon" v-if="additionalData">{{
-            additionalData(item)
-          }}</span>
+        <span class="autocomplete-item-icon" v-if="icon && icon(item)">
+          <font-awesome-icon :icon="icon(item)" />
         </span>
-      </div>
+        {{ label(item) }}
+        <span class="autocomplete-item-addon" v-if="additionalData">{{
+          additionalData(item)
+        }}</span>
+      </span>
     </div>
   </div>
 </template>
