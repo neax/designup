@@ -1,7 +1,5 @@
 <template>
   <div>
-    <hr />
-
     <strong>autocompleteModel: {{ autocompleteModel }}</strong
     ><br />
     <strong>selectedObject: {{ selectedObject }}</strong
@@ -53,6 +51,33 @@
         </div>
       </div>
       <input type="text" placeholder="My input" />
+      <autocomplete
+        :items="items"
+        @change="fetchItems"
+        @selected="itemSelected"
+        placeholder="Buscar"
+        :autoselect="2"
+        :additionalData="item => item.id"
+        :icon="item => 'bars'"
+      />
+      <autocomplete
+        :items="items"
+        @change="fetchItems"
+        @selected="itemSelected"
+        placeholder="Buscar"
+        :autoselect="2"
+        :additionalData="item => item.id"
+        :icon="item => 'bars'"
+      />
+      <autocomplete
+        :items="items"
+        @change="fetchItems"
+        @selected="itemSelected"
+        placeholder="Buscar"
+        :autoselect="2"
+        :additionalData="item => item.id"
+        :icon="item => 'bars'"
+      />
       <a class="button primary icon-button"> <font-awesome-icon :icon="['fas', 'bars']" /> </a>
     </div>
     <textarea>Hello world</textarea>
@@ -175,5 +200,3 @@ export default {
   }
 }
 </script>
-
-<style scoped></style>

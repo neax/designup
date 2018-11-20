@@ -178,8 +178,26 @@ select {
   }
 
   & .autocomplete {
-    line-height: var(--base-line-height);
-    margin-right: -1px;
+    width: 100%;
+    margin-left: -1px;
+
+    &:focus-within {
+      z-index: 3;
+    }
+
+    &:not(:last-child) {
+      & input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    &:not(:first-child) {
+      & input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
   }
 
   & .icon-button {
@@ -194,10 +212,10 @@ select {
 
 .autocomplete {
   position: relative;
-  z-index: 999;
 }
 
 .autocomplete-items {
+  z-index: 999;
   position: absolute;
   margin-top: calc(var(--spacing) / -2);
   width: 100%;

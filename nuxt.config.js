@@ -25,6 +25,9 @@ export default {
         features: {
           'color-mod-function': {
             unresolved: 'ignore'
+          },
+          'focus-within-pseudo-class': {
+            preserve: true
           }
         }
       })
