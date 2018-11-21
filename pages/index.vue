@@ -1,10 +1,10 @@
 <template>
   <div>
+    <a @click="$refs.auto.reset()">RSET</a> <a @click="$refs.auto.focus()">FOCUS</a>
     <strong>autocompleteModel: {{ autocompleteModel }}</strong
     ><br />
     <strong>selectedObject: {{ selectedObject }}</strong
     ><br />
-    <!-- v-model="autocompleteModel" -->
     <autocomplete
       :items="items"
       @change="fetchItems"
@@ -13,6 +13,7 @@
       :autoselect="2"
       :additionalData="item => item.id"
       :icon="item => 'bars'"
+      ref="auto"
     />
 
     <hr />

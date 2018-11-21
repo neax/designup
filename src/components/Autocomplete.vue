@@ -12,6 +12,7 @@
       @keydown.up.prevent="upIndex"
       @keydown.esc="hideItems"
       @keydown.tab="hideItems"
+      ref="input"
     />
 
     <div
@@ -127,6 +128,14 @@ export default {
     hideItems() {
       this.showItems = false
       this.itemsHover = false
+    },
+
+    reset() {
+      Object.assign(this.$data, this.$options.data())
+    },
+
+    focus() {
+      this.$nextTick(() => this.$refs.input.focus())
     }
   }
 }
