@@ -14,10 +14,9 @@
       @keydown.tab="hideItems"
       ref="input"
     />
-
     <div
       class="autocomplete-items"
-      v-if="showItems"
+      v-if="showItems && items.length > 0"
       @mouseover="itemsHover = true"
       @mouseleave="itemsHover = false"
     >
@@ -64,6 +63,10 @@ export default {
   },
 
   watch: {
+    selectedIndex(newIndex) {
+      this.$nextTick(() => this.scrollIntoIndex(newIndex))
+    },
+
     items(newItems) {
       this.selectedIndex = newItems.length <= this.autoselect ? 0 : undefined
     }
@@ -122,6 +125,13 @@ export default {
       } else {
         this.showItems = true
         this.selectedIndex = this.items.length - 1
+      }
+    },
+
+    scrollIntoIndex(index) {
+      const autocompleteItems = this.$el.getElementsByClassName('autocomplete-item')
+      if (index !== undefined && autocompleteItems.length > 0) {
+        autocompleteItems[index].scrollIntoView(false)
       }
     },
 
