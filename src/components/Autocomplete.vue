@@ -106,10 +106,14 @@ export default {
 
     downIndex() {
       if (this.showItems) {
-        this.selectedIndex =
-          this.selectedIndex === undefined || this.selectedIndex >= this.items.length - 1
-            ? 0
-            : this.selectedIndex + 1
+        if (this.selectedIndex === undefined) {
+          this.selectedIndex = 0
+        } else {
+          this.selectedIndex =
+            this.selectedIndex >= this.items.length - 1
+              ? this.items.length - 1
+              : this.selectedIndex + 1
+        }
       } else {
         this.showItems = true
         this.selectedIndex = 0
@@ -118,10 +122,11 @@ export default {
 
     upIndex() {
       if (this.showItems) {
-        this.selectedIndex =
-          this.selectedIndex === undefined || this.selectedIndex === 0
-            ? this.items.length - 1
-            : this.selectedIndex - 1
+        if (this.selectedIndex === undefined) {
+          this.selectedIndex = this.items.length - 1
+        } else {
+          this.selectedIndex = this.selectedIndex === 0 ? 0 : this.selectedIndex - 1
+        }
       } else {
         this.showItems = true
         this.selectedIndex = this.items.length - 1
