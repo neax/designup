@@ -136,7 +136,7 @@ export default {
     scrollIntoIndex(index) {
       const autocompleteItems = this.$el.getElementsByClassName('autocomplete-item')
       if (index !== undefined && autocompleteItems.length > 0) {
-        autocompleteItems[index].scrollIntoView(false)
+        autocompleteItems[index].scrollIntoView({ block: 'nearest' })
       }
     },
 
