@@ -220,15 +220,22 @@ select {
   margin-top: calc(var(--spacing) / -2);
   width: 100%;
   box-shadow: 0 5px 20px rgba(128, 128, 128, 0.1);
+  max-height: calc(var(--spacing) * 10);
+  overflow-y: scroll;
+  border-radius: var(--base-border-radius);
+  border: var(--base-border);
+  /* border-color: var(--primary); */
 }
 
 .autocomplete-item {
   display: block;
   background-color: var(--white);
-  padding: calc(var(--spacing) / 3);
+  padding: calc(var(--spacing) / 3) calc(var(--spacing) / 2);
   cursor: default;
   line-height: var(--base-line-height);
   border: var(--base-border);
+  border-left: 0;
+  border-right: 0;
   cursor: pointer;
   clear: both;
   overflow: hidden;
@@ -242,17 +249,11 @@ select {
     border-bottom: 0;
   }
 
-  &:first-child {
-    /* border-top-color: var(--primary); */
-  }
   &:last-child {
-    /* border-bottom-color: var(--primary); */
-    border-bottom-left-radius: var(--base-border-radius);
-    border-bottom-right-radius: var(--base-border-radius);
+    border-bottom: 0;
   }
   &:first-child {
-    border-top-left-radius: var(--base-border-radius);
-    border-top-right-radius: var(--base-border-radius);
+    border-top: 0;
   }
 }
 
