@@ -45,7 +45,6 @@ a {
   color: var(--primary);
   cursor: pointer;
   text-decoration: none;
-  text-decoration-skip: ink;
 
   &:hover {
     color: color-mod(var(--primary) shade(12.5%));

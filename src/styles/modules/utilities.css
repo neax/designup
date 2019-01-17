@@ -2,10 +2,10 @@
 
 /* Floats */
 
-.left {
+.float-left {
   float: left;
 }
-.right {
+.float-right {
   float: right;
 }
 
@@ -78,33 +78,101 @@
   background: var(--color-1);
 }
 
-.background-color {
+.color-background {
   color: var(--color-2);
   background: var(--color-1);
 }
 
-.section-spacing {
-  margin-bottom: calc(var(--spacing) * 1.5);
+.margin-top,
+.margin-right,
+.margin-bottom,
+.margin-left,
+.margin-horizontal,
+.margin-vertical,
+.margin {
+  --multiplier: 1.5;
+
+  &.none {
+    --multiplier: 0;
+  }
 
   &.small {
-    margin-bottom: var(--spacing);
+    --multiplier: 1;
   }
 
   &.large {
-    margin-bottom: calc(var(--spacing) * 2);
+    --multiplier: 2;
   }
 }
 
-.inner-spacing {
-  padding: calc(var(--spacing) / 2);
+.margin-top {
+  margin-top: calc(var(--spacing) * var(--multiplier));
+}
+.margin-right {
+  margin-right: calc(var(--spacing) * var(--multiplier));
+}
+.margin-bottom {
+  margin-bottom: calc(var(--spacing) * var(--multiplier));
+}
+.margin-left {
+  margin-left: calc(var(--spacing) * var(--multiplier));
+}
+.margin-horizontal {
+  margin-left: calc(var(--spacing) * var(--multiplier));
+  margin-right: calc(var(--spacing) * var(--multiplier));
+}
+.margin-vertical {
+  margin-top: calc(var(--spacing) * var(--multiplier));
+  margin-bottom: calc(var(--spacing) * var(--multiplier));
+}
+.margin {
+  margin: calc(var(--spacing) * var(--multiplier));
+}
+
+.padding-top,
+.padding-right,
+.padding-bottom,
+.padding-left,
+.padding-horizontal,
+.padding-vertical,
+.padding {
+  --multiplier: calc(1 / 2);
+
+  &.none {
+    --multiplier: 0;
+  }
 
   &.small {
-    padding: calc(var(--spacing) / 4);
+    --multiplier: calc(1 / 4);
   }
 
   &.large {
-    padding: var(--spacing);
+    --multiplier: 1;
   }
+}
+
+.padding-top {
+  padding-top: calc(var(--spacing) * var(--multiplier));
+}
+.padding-right {
+  padding-right: calc(var(--spacing) * var(--multiplier));
+}
+.padding-bottom {
+  padding-bottom: calc(var(--spacing) * var(--multiplier));
+}
+.padding-left {
+  padding-left: calc(var(--spacing) * var(--multiplier));
+}
+.padding-horizontal {
+  padding-left: calc(var(--spacing) * var(--multiplier));
+  padding-right: calc(var(--spacing) * var(--multiplier));
+}
+.padding-vertical {
+  padding-top: calc(var(--spacing) * var(--multiplier));
+  padding-bottom: calc(var(--spacing) * var(--multiplier));
+}
+.padding {
+  padding: calc(var(--spacing) * var(--multiplier));
 }
 
 /* Display */
