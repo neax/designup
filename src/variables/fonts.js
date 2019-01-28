@@ -6,16 +6,16 @@ module.exports = {
 
   /* Font sizes */
   baseFontSize: '1rem',
-  smallFontSize: '0.7rem',
-  mediumFontSize: '0.9rem',
-  bigFontSize: '1.3rem',
+  smallFontSize: '0.756rem',
+  mediumFontSize: '0.870rem',
+  bigFontSize: '1.15rem',
 
   /* Header sizes */
-  h1Fontsize: '2rem',
-  h2Fontsize: '1.5rem',
-  h3Fontsize: '1.25rem',
-  h4Fontsize: '1.125rem',
-  h5Fontsize: '1.0625rem',
+  h1Fontsize: '2.011rem',
+  h2Fontsize: '1,749rem',
+  h3Fontsize: '1.521rem',
+  h4Fontsize: '1.322rem',
+  h5Fontsize: '1.15rem',
   h6Fontsize: '1rem',
 
   /* Font weight */
