@@ -5,9 +5,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
-    link: [
-      { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.neax.io/assets/neax-fonts.css' }
-    ]
+    link: [{ rel: 'stylesheet', type: 'text/css', href: '//cdn.neax.io/assets/neax-fonts.css' }]
   },
   plugins: ['~/lib/plugins/font-awesome.js'],
   css: ['~/css/main.css'],

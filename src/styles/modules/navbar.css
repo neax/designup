@@ -74,7 +74,10 @@ nav {
 .nav-logo {
   font-size: var(--big-font-size);
   font-weight: var(--font-semi-bold);
-  padding: calc((var(--navbar-height) - var(--big-font-size)) / 2) calc(var(--spacing) / 2);
+  padding: calc(
+      (var(--navbar-height) - var(--big-font-size) - calc(var(--big-font-size) - 1rem)) / 2
+    )
+    calc(var(--spacing) / 2);
 
   &:hover {
     background-color: inherit;
