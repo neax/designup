@@ -12,7 +12,7 @@ module.exports = {
 
   /* Header sizes */
   h1Fontsize: '2.011rem',
-  h2Fontsize: '1,749rem',
+  h2Fontsize: '1.749rem',
   h3Fontsize: '1.521rem',
   h4Fontsize: '1.322rem',
   h5Fontsize: '1.15rem',
