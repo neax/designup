@@ -20,7 +20,7 @@
 form {
   &.horizontal {
     label {
-      display: inline-block;
+      @apply inline-block;
     }
   }
 }
@@ -39,65 +39,53 @@ legend {
 }
 
 label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: calc(var(--spacing) / 4);
+  @apply block font-semibold mb-2;
 }
 
 input,
 select,
 textarea {
-  display: block;
-  font-family: var(--base-font-family);
-  font-size: 16px;
+  @apply block;
 }
 
 :--all-text-inputs,
 select[multiple],
 textarea {
-  appearance: none;
-  background-color: var(--white);
-  border: var(--base-border);
-  border-radius: var(--base-border-radius);
-  box-sizing: border-box;
-  margin-bottom: calc(var(--spacing) / 2);
-  transition: border-color var(--base-duration) var(--base-timing);
-
-  width: 100%;
+  @apply appearance-none
+         bg-white
+         rounded
+         mb-3
+         w-full
+         outline-none
+         border
+         border-solid
+         border-grey-light;
+  transition: border-color 150ms;
 
   &:hover {
-    border-color: color-mod(var(--white) shade(20%));
+    @apply border-grey;
   }
 
   &:focus {
-    border-color: var(--primary);
-    outline: none;
+    @apply border border-primary;
   }
 
   &:disabled {
-    background-color: color-mod(var(--white) shade(5%));
-    cursor: not-allowed;
-
-    &:hover {
-      border: var(--base-border);
-    }
+    @apply bg-grey cursor-not-allowed;
   }
 
   &::placeholder {
-    color: color-mod(color-mod(var(--dark-gray) lightness(60%)) tint(40%));
+    @apply text-grey;
   }
 }
 
 :--all-text-inputs,
 select[multiple] {
-  padding: calc(var(--spacing) / 3) calc(var(--spacing) / 2);
-  line-height: var(--base-line-height);
+  @apply p-3;
 }
 
 textarea {
-  padding: calc(var(--spacing) / 3);
-  line-height: var(--base-line-height);
-  resize: vertical;
+  @apply p-3 leading-normal resize-y;
 }
 
 input[type='checkbox'],

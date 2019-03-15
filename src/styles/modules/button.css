@@ -2,27 +2,12 @@
 * Buttons
 */
 .button {
-  appearance: none;
-  border-radius: var(--base-border-radius);
-  cursor: pointer;
-  display: inline-block;
-  font-family: var(--base-font-family);
-  font-size: var(--base-font-size);
-  font-weight: var(--font-semi-bold);
-  line-height: 1;
-  padding: calc(var(--spacing) / 2) var(--spacing);
-  margin: 0;
-  text-align: center;
+  @apply appearance-none rounded cursor-pointer inline-block font-semibold py-3 px-4 text-center bg-primary border border-solid border-primary text-white;
   text-decoration: none;
   transition: background-color var(--base-duration) var(--base-timing);
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-
-  /* Base styling */
-  background-color: var(--color-1);
-  border: 1px solid var(--color-1);
-  color: var(--color-2);
 
   &:hover,
   &.active {

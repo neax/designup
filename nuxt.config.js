@@ -11,6 +11,7 @@ export default {
   css: ['~/css/main.css'],
   build: {
     postcss: [
+      require('tailwindcss')('./tailwind.js'),
       require('postcss-preset-env')({
         stage: 0,
         preserve: false,

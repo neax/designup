@@ -1,123 +1,68 @@
-:root {
-  --navbar-height: 52px;
-}
-
 nav {
-  background-color: var(--color-1);
-  padding: 0 calc(var(--spacing) / 2);
-  text-align: center;
+  @apply bg-primary px-3 text-center flex flex-wrap;
 
-  @media (--medium-screen-up) {
-    display: flex;
-    text-align: left;
-    align-content: space-around;
-    flex-wrap: wrap;
+  @screen md {
+    @apply text-left content-around;
   }
 
   & a {
-    padding: calc((var(--navbar-height) - var(--base-font-size)) / 2) calc(var(--spacing) / 2);
-    color: var(--color-2);
-    display: inline-block;
-    line-height: 1;
-    white-space: nowrap;
+    @apply p-4 text-white leading-none items-center self-center;
 
     &:hover {
-      background-color: var(--color-1-s-050);
-      color: var(--color-2);
-      text-decoration: none;
-    }
-
-    &.active {
-      background-color: var(--color-1-s-050);
+      @apply bg-primary-dark text-white;
     }
   }
 
   &.fixed {
-    position: fixed;
-    z-index: 99999;
-  }
-
-  & .badge {
-    display: inline;
+    @apply fixed z-40;
   }
 }
 
 .nav-right,
 .nav-left {
-  display: none;
+  @apply hidden;
 
-  @media (--medium-screen-up) {
-    display: inline-flex;
+  @screen md {
+    @apply inline-flex;
   }
 
   &.nav-responsive {
-    @media (--medium-screen-down) {
-      display: block;
+    @apply inline-flex mx-auto;
+
+    @screen md {
+      @apply hidden;
     }
   }
 }
 
 .nav-left {
-  @media (--medium-screen-up) {
-    flex: auto;
+  @screen md {
+    @apply flex-auto;
   }
 }
 
 .nav-responsive-button {
-  float: right;
-  display: inline-block;
-  @media (--medium-screen-up) {
-    display: none;
+  @apply inline-flex;
+
+  @screen md {
+    @apply hidden;
   }
 }
 
 .nav-logo {
-  font-size: var(--big-font-size);
-  font-weight: var(--font-semi-bold);
-  padding: calc(
-      (var(--navbar-height) - var(--big-font-size) - calc(var(--big-font-size) - 1rem)) / 2
-    )
-    calc(var(--spacing) / 2);
+  @apply font-semibold px-3 py-3 text-xl flex-auto;
 
-  &:hover {
-    background-color: inherit;
+  @screen md {
+    @apply flex-initial;
   }
+
+  &:hover,
   &:active {
-    background-color: transparent;
+    @apply bg-primary;
   }
 
   & i,
   & svg {
-    margin-right: calc(var(--spacing) / 6);
-  }
-}
-
-.nav-avatar {
-  display: inline-block;
-  line-height: 0;
-  margin-right: calc(var(--spacing) / 6);
-  vertical-align: middle;
-
-  & img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-  }
-}
-
-.nav-notification {
-  position: relative;
-
-  &::after {
-    position: absolute;
-    top: 10px;
-    right: 5px;
-
-    background-color: var(--red);
-    border-radius: var(--base-border-radius);
-    content: attr(data-notification);
-    font-size: var(--small-font-size);
-    padding: 0 calc(var(--spacing) / 6);
-    text-align: center;
+    @apply mr-1;
   }
 }

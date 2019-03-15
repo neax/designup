@@ -4,7 +4,7 @@
       Hello world. This is my first modal
     </modal>
 
-    <a @click="$refs.modal.open()">Launch!!</a>
+    <a @click="$refs.modal.open()" class="button primary">Launch!!</a>
 
     <div class="padding color-background red rounded"><h1 class="margin bottom none">Hi</h1></div>
     <a @click="$refs.auto.reset()">RSET</a> <a @click="$refs.auto.focus()">FOCUS</a>

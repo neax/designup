@@ -1,14 +1,13 @@
 .nav-dropdown {
-  display: inline-block;
-  position: relative;
+  @apply relative flex;
 
   &:hover {
     & .nav-dropdown-button {
-      background-color: var(--color-1-s-050);
+      @apply bg-primary-dark;
     }
 
     & .nav-dropdown-content {
-      display: block;
+      @apply block;
     }
   }
 }
@@ -16,33 +15,32 @@
 .nav-left {
   & .nav-dropdown-content {
     & a {
-      text-align: left;
+      @apply text-left;
     }
   }
 }
 
 .nav-right {
   & .nav-dropdown-content {
-    right: 0;
-    left: inherit;
+    @apply pin-r;
   }
 }
 
 .nav-dropdown-content {
-  background-color: var(--color-1);
-  position: absolute;
-  left: 0;
-  display: none;
+  @apply bg-primary absolute pin-l hidden z-40;
+  top: 100%;
   min-width: 120px;
   width: max-content;
-  z-index: 99999;
 
   & a {
-    display: block;
-    text-align: right;
+    @apply block text-right;
   }
 }
 
+.nav-dropdown-icon {
+  @apply mr-1;
+}
+
 .nav-dropdown-icon-arrow {
-  margin-left: calc(var(--spacing) / 6);
+  @apply ml-2;
 }

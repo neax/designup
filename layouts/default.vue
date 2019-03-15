@@ -4,7 +4,8 @@
       <template slot="left">
         <a href="#">Icon</a>
         <NavDropdown :title="{ name: 'Dropdown left', icon: 'bars' }" icon="true">
-          <a href="#">First link</a>
+          <a href="#">Second link</a>
+          <a href="#">Firest link</a>
         </NavDropdown>
         <NavDropdown :title="{ name: 'Dropdown left' }" icon="true">
           <a href="#">First link</a>

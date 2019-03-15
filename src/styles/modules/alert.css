@@ -1,29 +1,11 @@
 .alert {
-  padding: calc(var(--spacing) / 3);
-  border-radius: var(--base-border-radius);
-  color: var(--white);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: calc(var(--spacing) / 2);
-  text-align: center;
-  width: 100%;
-  background-color: var(--color-1);
-  color: var(--color-2);
+  @apply p-2 rounded font-semibold text-center w-full bg-primary bg-primary text-white;
 
   &.fixed {
-    position: fixed;
-    top: null;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    z-index: 9999;
+    @apply fixed pin-x pin-b rounded-none z-40;
   }
 }
 
 .alert-close {
-  cursor: pointer;
-  float: right;
-  line-height: var(--base-line-height);
-  margin-right: calc(var(--spacing) / 2);
+  @apply cursor-pointer float-right mr-3;
 }

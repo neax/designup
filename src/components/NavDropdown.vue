@@ -8,7 +8,7 @@
         <font-awesome-icon
           :icon="title.icon"
           v-if="title.icon"
-          :class="{ 'icon-left': title.icon && title.name }"
+          :class="{ 'nav-dropdown-icon': title.icon && title.name }"
         />
         {{ title.name }}
       </template>
@@ -24,9 +24,3 @@ export default {
   props: ['icon', 'title']
 }
 </script>
-
-<style scoped>
-.icon-left {
-  margin-right: calc(var(--spacing) / 4);
-}
-</style>

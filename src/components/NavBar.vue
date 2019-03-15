@@ -32,7 +32,6 @@ export default {
     color: { type: String, default: 'primary' },
     to: { type: String, default: '/' }
   },
-
   data() {
     return {
       responsive: false

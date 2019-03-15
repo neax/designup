@@ -1,2 +1,4 @@
 @import '~normalize.css/normalize.css';
+@tailwind components;
+@tailwind utilities;
 @import '../src/styles/modules.css';
